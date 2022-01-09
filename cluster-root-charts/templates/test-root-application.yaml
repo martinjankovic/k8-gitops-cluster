@@ -9,7 +9,7 @@ spec:
   destination:
     server: https://kubernetes.default.svc
     namespace: argocd
-  project: devel
+  project: default
   source:
   source:
     path: cluster-bootstrap-charts/
