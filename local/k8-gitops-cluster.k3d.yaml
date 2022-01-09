@@ -1,0 +1,12 @@
+apiVersion: k3d.io/v1alpha2
+kind: Simple
+name: k8-gitops-cluster
+servers: 1
+agents: 1
+ports:
+  - port: 9090:80 # same as `--port '8080:80@loadbalancer'`
+    nodeFilters:
+      - loadbalancer
+  - port: 9433:443
+    nodeFilters:
+      - loadbalancer
