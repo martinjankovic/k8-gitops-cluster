@@ -8,8 +8,9 @@ metadata:
 spec:
   destination:
     server: https://kubernetes.default.svc
-    namespace: default
+    namespace: argocd
   project: default
+  source:
   source:
     path: cluster-bootstrap-charts/
     repoURL: https://github.com/martinjankovic/k8-gitops-cluster.git
