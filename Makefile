@@ -32,4 +32,4 @@ argocd_get-password:
 	kubectl -n argocd get secret argocd-initial-admin-secret -o jsonpath="{.data.password}" | base64 -d; echo
 
 argocd_proxy-ui:
-	kubectl port-forward svc/argocd-server -n argocd 9090:80	
+	kubectl port-forward svc/argocd-server -n argocd 9091:80	
