@@ -1,7 +1,7 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: test-root-application
+  name: devel-root-application
   namespace: argocd
   finalizers:
     - resources-finalizer.argocd.argoproj.io
@@ -9,10 +9,9 @@ spec:
   destination:
     server: https://kubernetes.default.svc
     namespace: argocd
-  project: default
+  project: devel
   source:
-  source:
-    path: cluster-bootstrap-charts/
+    path: cluster-test-charts/
     repoURL: https://github.com/martinjankovic/k8-gitops-cluster.git
     targetRevision: HEAD
   syncPolicy:
